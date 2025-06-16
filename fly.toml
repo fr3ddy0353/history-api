@@ -1,21 +1,21 @@
 app = "history-api"
-primary_region = "ord"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[build]
+  builder = "paketobuildpacks/builder:base"
 
 [env]
-  PORT = "8080"
+  PYTHONUNBUFFERED = "true"
 
-[[services]]
-  internal_port = 8080
-  protocol = "tcp"
+[experimental]
+  auto_rollback = true
 
-  [[services.ports]]
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
+[deploy]
+  release_command = "python refresh_data.py"
 
 [processes]
-  web = "gunicorn app:app"
   refresh = "python refresh_data.py"
+  web = "gunicorn app:app --bind 0.0.0.0:8080 --workers 2"
