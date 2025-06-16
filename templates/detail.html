@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ event.name }}</title>
+</head>
+<body>
+  <a href="/">← Back</a>
+  <h1>{{ event.name }}</h1>
+  {% for sec in sections %}
+    <h2>{{ sec.section_title }}</h2>
+    <p>{{ sec.content }}</p>
+  {% endfor %}
+</body>
+</html>
