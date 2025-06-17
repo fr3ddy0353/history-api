@@ -1,7 +1,7 @@
 import sqlite3
 import wikipediaapi
 
-# 25+ major wars
+# Major wars plus less common French and Hispanic wars
 wars = [
     "World War II",
     "World War I",
@@ -27,7 +27,15 @@ wars = [
     "Thirty Years' War",
     "Hundred Years' War",
     "Peloponnesian War",
-    "Punic Wars"
+    "Punic Wars",
+    # Added less common wars
+    "French Revolutionary Wars",
+    "Franco-Dutch War",
+    "War of the Spanish Succession",
+    "Mexican-American War",
+    "Chaco War",
+    "War of the Triple Alliance",
+    "Colombian Civil War",
 ]
 
 wiki = wikipediaapi.Wikipedia(
