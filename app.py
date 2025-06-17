@@ -21,5 +21,9 @@ def index():
     conn.close()
     return render_template('index.html', events=events, selected_event=selected_event, sections=sections)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(debug=True)

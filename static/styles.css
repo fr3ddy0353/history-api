@@ -1,0 +1,166 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #005fa3;
+}
+
+nav button {
+  padding: 5px 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+nav button:hover {
+  background-color: #ddd;
+}
+
+/* Event selector */
+.event-selector {
+  margin-bottom: 20px;
+}
+
+.event-selector select {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+/* Event details */
+.event-details {
+  margin-top: 30px;
+}
+
+.event-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.event-details article {
+  margin-bottom: 25px;
+}
+
+.event-details h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.event-details p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav a {
+  color: #90caf9;
+}
+
+body.dark-mode nav a:hover {
+  color: #bbdefb;
+}
+
+body.dark-mode nav button {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode .event-details h3,
+body.dark-mode .event-details p {
+  color: #ddd;
+}
+
+body.dark-mode footer {
+  color: #999;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .event-selector select {
+    width: 100%;
+  }
+
+  .event-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .event-details h3 {
+    font-size: 1.1rem;
+  }
+}
