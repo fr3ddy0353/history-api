@@ -2,8 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>History Explorer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KJ4DGRVGE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6KJ4DGRVGE');
+  </script>
+
   <style>
     :root {
       --bg-light: #ffffff;
@@ -170,6 +181,7 @@
       <button id="toggle-theme">Dark Mode</button>
     </nav>
   </header>
+
   <main>
     <form method="GET" action="/">
       <label for="event_id">Select a Historical Event</label>
