@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - History Explorer</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>About History Explorer</h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-      </nav>
-    </header>
+  <header>
+    <h1>History Explorer</h1>
+    <nav>
+      <a href="/">Home</a> |
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  <main style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>About History Explorer</h2>
+    <section style="background:#f5f7fa; padding:1.5rem; border-radius:8px; margin-bottom: 1.5rem;">
+      <p>Hello! I’m Frederick, a 13-year-old developer passionate about history and technology. I created <strong>History Explorer</strong> to make learning about major historical wars easier and more accessible for everyone — especially students and teachers.</p>
+      
+      <p>This project uses trusted public sources to provide clear, organized summaries and detailed sections about each conflict. My goal is to help people explore history in a way that’s simple, informative, and engaging.</p>
+      
+      <p>If you’re a teacher, student, or school representative interested in using History Explorer, collaborating, or just want to reach out, I’d love to hear from you!</p>
+    </section>
 
-    <main>
-      <section>
-        <h2>Hi, I'm Frederick!</h2>
-        <p>
-          I'm a 13-year-old developer passionate about history and technology. I built History Explorer to make learning about major historical events and wars easier, more accessible, and actually fun for students and teachers.
-        </p>
-        <p>
-          This platform pulls live data from Wikipedia and presents it in a clean, easy-to-use format. Whether you're studying for a test or just curious about the past, History Explorer is here to help.
-        </p>
-        <p>
-          I plan to keep adding new content, features, and design improvements over time. If you have suggestions or ideas, I’d love to hear from you!
-        </p>
-        <p>
-          You can explore events, toggle dark mode, and use it on mobile or desktop — all free and open to everyone.
-        </p>
-      </section>
-
-      <section>
-        <h3>Support & Feedback</h3>
-        <p>
-          If you're an educator or a student who finds this useful, please reach out! You can also support this project with donations in the future to help keep it running 24/7.
-        </p>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 History Explorer. Created by Frederick.</p>
-      <p>Contact me: <a href="mailto:dichuiscute@gmail.com">dichuiscute@gmail.com</a></p>
-    </footer>
-  </div>
+    <section style="background:#f5f7fa; padding:1.5rem; border-radius:8px;">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:frederickdev2025@gmail.com">frederickdev2025@gmail.com</a></p>
+    </section>
+  </main>
 </body>
 </html>
