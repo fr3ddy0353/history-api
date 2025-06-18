@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - History Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+      h1, h2 { color: var(--primary); }
+      p { margin-bottom: 1rem; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>History Explorer</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/terms">Terms</a>
+            <button id="toggle-theme">Dark Mode</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Terms of Service</h1>
+
+        <p><strong>Effective Date:</strong> June 18, 2025</p>
+
+        <h2>1. Personal and Educational Use Only</h2>
+        <p>
+            This website is provided for free to help people explore historical events in an easy-to-read format.
+            You may use this site for personal, educational, or academic purposes.
+        </p>
+
+        <h2>2. No Commercial Use</h2>
+        <p>
+            You are <strong>not allowed</strong> to use this project, content, or code for any commercial purposes
+            (including selling, reselling, repackaging, or profiting from it) without written permission from the creator.
+        </p>
+
+        <h2>3. Copyright Notice</h2>
+        <p>
+            The History Explorer project and its contents are © 2025 Frederick and protected under
+            United States copyright law. All rights reserved.
+        </p>
+
+        <h2>4. Contact</h2>
+        <p>
+            For permissions or questions, email: 
+            <a href="mailto:frederickdev2025@gmail.com">frederickdev2025@gmail.com</a>
+        </p>
+    </main>
+    <script>
+        const toggleBtn = document.getElementById('toggle-theme');
+        const bodyEl = document.body;
+
+        function updateButtonText() {
+            toggleBtn.textContent = bodyEl.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            bodyEl.classList.toggle('dark');
+            localStorage.setItem('theme', bodyEl.classList.contains('dark') ? 'dark' : 'light');
+            updateButtonText();
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            bodyEl.classList.add('dark');
+        }
+        updateButtonText();
+    </script>
+</body>
+</html>

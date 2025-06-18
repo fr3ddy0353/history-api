@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - History Explorer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    h1, h2 { color: var(--primary); }
+    p { margin-bottom: 1rem; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>History Explorer</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <button id="toggle-theme">Dark Mode</button>
+    </nav>
+  </header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p><strong>Effective Date:</strong> June 18, 2025</p>
+
+    <h2>1. Data Collection</h2>
+    <p>
+      We use Google Analytics to collect anonymous data about how visitors use this website.
+      This may include pages visited, time spent on site, and general location (city-level).
+    </p>
+
+    <h2>2. How Data is Used</h2>
+    <p>
+      The data collected helps us understand how users interact with the site so we can improve the experience.
+      No personally identifying information is collected or stored by us directly.
+    </p>
+
+    <h2>3. Cookies</h2>
+    <p>
+      Google Analytics may use cookies to gather usage statistics. By using this site, you agree to the use of cookies
+      for analytical purposes.
+    </p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>
+      This site uses Google Analytics. Google may store and process your information according to their own privacy policy:
+      <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+    </p>
+
+    <h2>5. Data Sharing</h2>
+    <p>
+      We do not share, sell, or rent any user data. Data is only accessed anonymously through analytics tools.
+    </p>
+
+    <h2>6. Your Choices</h2>
+    <p>
+      You can opt out of Google Analytics tracking by using the
+      <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-Out Tool</a>.
+    </p>
+
+    <h2>7. Contact</h2>
+    <p>
+      If you have any questions about this policy, contact us at:
+      <a href="mailto:frederickdev2025@gmail.com">frederickdev2025@gmail.com</a>
+    </p>
+  </main>
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    const bodyEl = document.body;
+
+    function updateButtonText() {
+      toggleBtn.textContent = bodyEl.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      bodyEl.classList.toggle('dark');
+      localStorage.setItem('theme', bodyEl.classList.contains('dark') ? 'dark' : 'light');
+      updateButtonText();
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      bodyEl.classList.add('dark');
+    }
+    updateButtonText();
+  </script>
+</body>
+</html>

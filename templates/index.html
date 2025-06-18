@@ -176,10 +176,12 @@
   <header>
     <h1>History Explorer</h1>
     <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <button id="toggle-theme">Dark Mode</button>
-    </nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/terms">Terms</a>
+  <a href="/privacy">Privacy</a>
+  <button id="toggle-theme">Dark Mode</button>
+</nav>
   </header>
 
   <main>
@@ -205,6 +207,10 @@
       <p>Please select an event above to see detailed information.</p>
     {% endif %}
   </main>
+
+  <footer style="text-align: center; padding: 1rem 0; font-size: 0.9rem; color: gray;">
+  © 2025 Frederick. All rights reserved.
+</footer>
 
   <script>
     const toggleBtn = document.getElementById('toggle-theme');
